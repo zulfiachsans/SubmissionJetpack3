@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Nonton Yuk</string>
+    <string name="logo">Logo</string>
+    <string name="img_preview">Img Preview</string>
+    <string name="title">Title</string>
+    <string name="img_preview_darker">image_preview_darker</string>
+    <string name="movie">Movie</string>
+    <string name="tv_show">Tv Show</string>
+    <string name="description">Description</string>
+    <string name="genre">Genre</string>
+    <string name="duration">Duration</string>
+    <string name="release_date">Release Date</string>
+    <string name="overview">Overview</string>
+</resources>
