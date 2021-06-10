@@ -7,11 +7,15 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.dicoding.submissionjetpack1"
+        applicationId "com.dicoding.submissionjetpack2"
         minSdkVersion 26
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+
+        buildConfigField "String", "BASE_URL", "\"https://api.themoviedb.org/3/\""
+        buildConfigField "String", "IMAGE_URL", "\"https://image.tmdb.org/t/p/w500/\""
+        buildConfigField "String", "API_KEY", "\"04aba7ca5320f2501850724835d4b897\""
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -46,15 +50,28 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
     implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
     implementation "com.google.android.material:material:$materialVersion"
-    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.synnapps:carouselview:0.1.5'
     implementation "androidx.palette:palette-ktx:$paletteVersion"
+    implementation "androidx.activity:activity-ktx:1.1.0"
+    implementation 'com.synnapps:carouselview:0.1.5'
+
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+
+    implementation "androidx.test.espresso:espresso-idling-resource:$idlingResVersion"
 
     //testing
     testImplementation "junit:junit:$junitVersion"
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
+    testImplementation "org.mockito:mockito-inline:$mockitoVersion"
+    testImplementation "androidx.arch.core:core-testing:$archLifecycleVersion"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
+
     androidTestImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
