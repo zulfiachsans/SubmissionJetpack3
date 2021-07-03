@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dicoding.submissionjetpack2">
+    package="com.dicoding.submissionjetpack3">
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
@@ -9,15 +9,18 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.dicoding.submissionjetpack2.ui.main.MainActivity"></activity>
-        <activity android:name="com.dicoding.submissionjetpack2.ui.detail.DetailActivity" />
-        <activity android:name="com.dicoding.submissionjetpack2.ui.splashscreen.SplashScreenActivity">
+        <activity android:name="com.dicoding.submissionjetpack3.ui.splashscreen.SplashScreenActivity"
+            android:theme="@style/SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.dicoding.submissionjetpack3.ui.detail.DetailActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name="com.dicoding.submissionjetpack3.ui.main.MainActivity"
+            android:theme="@style/AppTheme"/>
 
         <meta-data
             android:name="preloaded_fonts"

@@ -1,13 +1,14 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.dicoding.submissionjetpack2"
+        applicationId "com.dicoding.submissionjetpack3"
         minSdkVersion 26
         targetSdkVersion 30
         versionCode 1
@@ -42,7 +43,6 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "androidx.core:core-ktx:$coreVersion"
     implementation "androidx.appcompat:appcompat:$appCompatVersion"
-    implementation "com.google.android.material:material:$materialVersion"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
 
     //ui
@@ -51,12 +51,16 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
     implementation "com.google.android.material:material:$materialVersion"
     implementation "com.github.bumptech.glide:glide:$glideVersion"
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation "androidx.palette:palette-ktx:$paletteVersion"
     implementation "androidx.activity:activity-ktx:1.1.0"
-    implementation 'com.synnapps:carouselview:0.1.5'
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation "androidx.paging:paging-runtime-ktx:$pagingVersion"
+
+    //room
+    implementation "androidx.room:room-runtime:$roomRuntimeVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
 
     //retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
