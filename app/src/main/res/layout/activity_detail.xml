@@ -41,7 +41,6 @@
                 android:layout_height="match_parent"
                 android:contentDescription="@string/img_preview_darker"
                 android:scaleType="centerCrop"
-                tools:srcCompat="@tools:sample/backgrounds/scenic"
                 tools:ignore="ContentDescription" />
 
             <androidx.appcompat.widget.Toolbar
